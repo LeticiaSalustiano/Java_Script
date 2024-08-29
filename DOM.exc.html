@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+<body>      
+    
+<div id="h1"><h1>Olá</h1></div>
+        
+        <script>
+           let d = window.document.getElementById('h1')
+           d.style.background = 'pink'
+           d.innerText = 'Olá!...'
+        </script>
+    
+<div class="h2"><h2>Bom Dia!</h2></div>
+
+    <script>
+        let d1 = window.document.getElementsByClassName('h2')[0]
+        d1.style.background = 'yellow'
+        d1.innerText = 'Bom Dia!...'
+    </script>
+
+<div name= "h3"><h3>Como você está?</h3></div>
+
+<script>
+    var d2 = window.document.getElementsByName('h3') [0]
+    d2.style.background = 'violet'
+    d2.innerText = 'Como você está?...'
+</script>
+
+<footer>
+    <div class="p"><p>Adeus</p></div>
+    
+    <script>
+        var d4 = window.document.querySelector('div.p')
+        d4.style.background = 'orange'
+        d4.innerText = 'Adeus!...'
+    </script>
+</footer>
+    
+</body>
+</html>
