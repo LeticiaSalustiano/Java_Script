@@ -1,0 +1,52 @@
+body{
+    background-color: #80808025;   
+}
+
+h1{
+    padding-top: 150px;
+    font-style: inherit;
+    text-align: center;
+}
+
+.container{
+    padding-top: 60px;
+    display: flex;
+    width: 80%;  
+    padding-left: 150px;
+}
+
+#area{   
+    margin-top: 10px;
+    height: 200px;
+    flex: auto;
+    background-color: #808080;
+}
+
+#area2{
+    margin-top: 10px;
+    height: 200px;
+    flex: auto;  
+    background-color: #808080; 
+}
+
+#area3{
+    margin-top: 10px;
+    height: 200px;
+    flex: auto;  
+    background-color: #808080;
+}
+
+
+#area4{
+    margin-top: 10px;
+    height: 200px;
+    flex: auto;  
+    background-color: #808080;
+}
+
+#area5{
+    margin-top: 10px;
+    height: 200px;
+    flex: auto;  
+    background-color: #808080;
+}
