@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Verificador de Idades</title>
+</head>
+<body>
+
+    <header><h1>Verificador de Idade:</h1></header>
+
+    <section>
+      <div>
+        <p>Ano de Nascimento:
+            <input type="number" id = "ano" min = "1900" max = "2023" placeholder="De 1900 à 2023">
+        </p>
+
+        <p>
+            Sexo:
+            <input type="radio" name="sexo" id="masc" checked>
+            <label for="sexo">Masculino</label>
+            <input type="radio" name="sexo" id="fem">
+            <label for="sexo">Feminino</label>
+            <input id="button" type="button" value="Verificar" onclick="verificar()">
+        </p>
+    </div>
+    
+    <div>
+        <img id="imagem" src="imagens/bebemenino.png" alt="Criança Menino">
+        <p id="texto"></p>
+    </div>
+</section>
+
+<footer> 
+    <p>&copy; Letícia Salustiano</p>
+</footer>
+
+<script src="script.js"></script>
+
+</div> </section>
+    
+</body>
+</html>
