@@ -16,8 +16,11 @@ function contar() {
         for(i; i <= f; i -= p) {
             resultado.innerHTML += `${i} \u{27A1}`;
         }
-    }
-    
+    } 
+       
+
+
     resultado.innerHTML += `\u{1F3C1}`
    
+    
 }
