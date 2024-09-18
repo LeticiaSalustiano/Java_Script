@@ -1,10 +1,11 @@
 function carregar(){
-    var agora = new Date()
-    var hora = agora.getHours()
-    var minuto = agora.getMinutes()
-    var horas = window.document.getElementById('horas')
-    var img = window.document.getElementById('imagem')
-    var corpo = window.document.getElementById('corpo')
+    
+   let agora = new Date()
+   let hora = agora.getHours()
+   let minuto = agora.getMinutes()
+   let horas = window.document.getElementById('horas')
+   let img = window.document.getElementById('imagem')
+   let corpo = window.document.getElementById('corpo')
 
     if (hora >= 0 && hora <= 5) {
         horas.innerText = `Boa madrugada, agora são ${hora} hora ${minuto} min`
