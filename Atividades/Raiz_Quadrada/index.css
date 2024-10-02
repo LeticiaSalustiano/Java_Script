@@ -1,0 +1,60 @@
+
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgba(255, 20, 145, 0.562);
+}
+
+header{
+    margin-top: 40px;
+    text-align: center;
+    padding: 3%;
+}
+
+h1{
+    color: white;
+    font-size: 35px;
+}
+
+section{
+    margin: auto;
+    width: 30%;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.322);
+}
+
+#div{
+    padding: 20px;
+}
+
+p{
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+
+/*input*/
+#numero{
+    margin-top: 25px;
+    background-color: white;
+    width: 40%;
+    height: 16px;
+}
+
+/*botão*/
+#btn{
+    height: 20px;
+}
+
+
+footer{
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}

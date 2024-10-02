@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Raiz Quadrada</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Raiz Quadrada</h1>
+    </header>
+
+    <section>
+        <div id="div">
+            <p>Digite um número:
+                <input type="number" name="Inicio" id="numero">
+                <input type="button" id="btn" value="Verificar">
+            </p>
+        </div>
+    </section>
+    
+     <footer> 
+        <h8>&copy; Letícia Salustiano</h8>
+     </footer>
+</body>
+</html>
+
+<script>
+    function calcularRaizQuadrada(numero) {
+    try {
+        // Verifica se o argumento é um número e se não é negativo
+        if (typeof numero !== 'number' || numero < 0) {
+            throw new Error('O valor deve ser um número positivo.');
+        }
+
+        // Calcula a raiz quadrada
+        return Math.sqrt(numero);
+    } catch (error) {
+        // Exibe uma mensagem de erro amigável
+        alert(error.message);
+        return null; // Retorna null em caso de erro
+
+    }
+}
+
+       // Função para lidar com o evento de clique do botão
+       document.getElementById('btn').addEventListener('click', function() {
+       let input = document.getElementById('numero').value;
+       let numero = parseFloat(input); // Converte a entrada para um número
+       let resultado = calcularRaizQuadrada(numero);
+
+    if (resultado !== null) {
+        alert(`A raiz quadrada de ${numero} é ${resultado}.`);
+    }
+});
+
+</script>
