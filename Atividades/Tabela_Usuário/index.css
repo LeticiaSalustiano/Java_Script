@@ -1,0 +1,11 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #fd70a18c;
+}
+
+#dimensoesBtn{
+     width: 30%;
+     height: 50px;
+     font-size: 25px;
+}

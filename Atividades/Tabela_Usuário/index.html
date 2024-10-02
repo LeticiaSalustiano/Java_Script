@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Tabela do Usuário</title>
+</head>
+<body>
+
+    <button id="dimensoesBtn">Mostrar Dimensões da Tela</button>
+    <p id="resultado"></p>
+
+    <script>
+            document.getElementById('dimensoesBtn').addEventListener('click', function() {
+            // Obter dimensões da tela
+            const largura = window.innerWidth;
+            const altura = window.innerHeight;
+            
+            // Exibir dimensões no parágrafo
+            document.getElementById('resultado').textContent = `Largura: ${largura}px, Altura: ${altura}px`;
+
+            // Exibir a URL atual no console
+            console.log(window.location.href);
+
+            // Perguntar ao usuário sobre redirecionamento
+            if (confirm('Deseja ser redirecionado para https://www.google.com?')) {
+                window.location.href = 'https://www.google.com';
+            }
+        });
+    </script>
+    
+</body>
+</html>
