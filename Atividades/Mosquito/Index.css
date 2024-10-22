@@ -1,0 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+
+
+h1{
+    
+    font-family: "Henny Penny", system-ui;
+    font-weight: 400px;
+    font-style: normal;
+    color: rgb(255, 0, 0); 
+    font-size: 60px;  
+    text-align: center;
+    padding: 7%;
+}
+
+
+

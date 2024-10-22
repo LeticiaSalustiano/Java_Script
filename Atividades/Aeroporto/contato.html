@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aeroporto Exemplo</title>
-    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -15,45 +16,35 @@
         <div class="logo">
             <img src="R.png" alt="Logotipo do Aeroporto Exemplo">
             <h4>Desembarque</h4>
-
         </div>
         <nav>
             <a href="home.html">Home</a>
-            <a href="serviços.html">Serviços</a>
+            <a href="Servicos.html">Serviços</a>
             <a href="contato.html">Contato</a>
         </nav>
     </header>
+    <main>
+        <h1>Formulário de Contato</h1>
+        <form action="/submit" method="POST">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+    
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
 
-    <div class="info">
-        <h3>AV</h3>
-        <h3>Ana Costa</h2>
-        <h4>662.</h4>
-        <h3>Gonzaga Santos, SP</h3>
-        <h3 id="telefone">Telefone: 13 99763-9872</h3>
-    </div>
+            <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone" required><br><br>
+    
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+    
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Líder Aviação. Todos os direitos reservados.</p>
+    </footer>
 
-    <h6>Redes Sociais</h6>
-    <div class="redes"> 
-        <div class="icon">
-            <a href="https://www.instagram.com/"><img src="./Redes/instagram.png" alt="rede"></a>
-            <a href="https://pt-br.facebook.com/"><img src="./Redes/facebook.png" alt="rede"></a>
-            <a href="https://api.whatsapp.com/send/?phone=5513997859547&text&type=phone_number&app_absent=0"><img src="./Redes/whatsapp.png" alt="rede"></a>
-            <a href="https://www.google.com/intl/pt-BR/gmail/about/"><img src="./Redes/o-email.png" alt="rede"></a>
-        </div>
-    </div>
-
-</section>
-<section>
-    <h2>Certificações</h2>
-    <h5>Somos homologados por ANAC, FAA, e EASA...</h5>
-</section>
-</main>
-
-<footer>
-<p>&copy; 2024 Líder Aviação. Todos os direitos reservados.</p>
-</footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
