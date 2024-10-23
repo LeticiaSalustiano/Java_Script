@@ -84,7 +84,7 @@ main{
 }
 
 form {
-    background: #c5c5c5;
+    background: #4d4d4d;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -105,14 +105,14 @@ textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
 input[type="submit"] {
-    background-color: #5cb85c;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 10px;
     border-radius: 5px;

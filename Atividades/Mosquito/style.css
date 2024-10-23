@@ -1,31 +1,78 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
-
-*{
-    margin: 0px;
-    padding: 0px;
-}
-
-body{
-    background-image: url(imagens/bg.jpg);
-    background-size: 100%;
-    
-}
-
-.mosquito1{
-    width: 50px;
-    height: 50px;
-}
 
 h1{
     
     font-family: "Henny Penny", system-ui;
     font-style: normal;
-    color: rgb(255, 16, 16); 
+    color: #ff0f0f; 
     font-size: 70px;  
+}
+
+body {
+    background-image: url(../imagens/bg.jpg);
+    background-size: cover;
+    width: 100%;
+    height: cover;
+    background-repeat: no-repeat;
+}
+
+main{
+    align-items: center;
     text-align: center;
     padding: 10%;
 }
 
+.btn {
+    font-family: "Henny Penny", system-ui;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
 
 
+.painel {
+    width: 100px;
+    padding: 15px;
+    border-top: solid 1px white;
+    background-color: white;
+    opacity: 70%;
+}
+
+.vidas {
+    
+}
+
+.cronometro {
+    font-size: 1.2em;
+}
+
+.mosquito1 {
+    width: 50px;
+    height: 50px;
+}
+
+.mosquito2 {
+    width: 70px;
+    height: 70px;
+}
+
+.mosquito3 {
+    width: 90px;
+    height: 90px;
+}
+
+.ladoA {
+    transform: scaleX(1); /* Normal */
+}
+
+.ladoB {
+    transform: scaleX(-1); /* Inverter horizontalmente */
+}
