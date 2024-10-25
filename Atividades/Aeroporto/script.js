@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = document.getElementById('email').value;
         const telefone = document.getElementById('telefone').value;
         const mensagem = document.getElementById('mensagem').value;
+        let anos = window.document.getElementById('ano');
+        let ano = Number(anos.value);
+        let idade = 2006 - ano;
 
         // Exibir mensagem de sucesso (ou faça o que desejar com os dados)
         alert(`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.`);
@@ -35,6 +38,15 @@ document.getElementById('btn-esquerda').addEventListener('click', function() {
 function atualizarCarrossel() {
     const deslocamento = -indice * 100; // -100% para mover uma imagem
     imagens.style.transform = `translateX(${deslocamento}%)`;
+}
+
+    if(idade > 124 || idade < 18){
+        texto.innerText = 'ERRO - Digite uma data válida (De 1900 à 2006)'
+        window.alert('[ERRO] - Digite uma data válida (De 1900 à 2006)')
+
+} else {
+    texto.innerText = `Idade Válida!`
+    
 }
 
 

@@ -33,7 +33,9 @@ header nav {
 h1 {
     text-align: center;
     color: #333;
-    padding-bottom: 4%;
+    padding-bottom: 2%;
+    margin-top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h2{
@@ -59,7 +61,7 @@ main{
     margin-bottom: 2%;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: #cecece;
 }
 
 .img_2{
@@ -84,7 +86,7 @@ main{
 }
 
 form {
-    background: #4d4d4d;
+    background: #bebebe;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -110,6 +112,15 @@ textarea {
     box-sizing: border-box;
 }
 
+#ano{
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 input[type="submit"] {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
@@ -117,11 +128,13 @@ input[type="submit"] {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    width: 30%;
+    margin-top: 5%;
 }
 
 input[type="submit"]:hover {
-    background-color: #4cae4c;
+    background-color: #929492;
+    color: #ffffff;
 }
 
 a{
@@ -205,7 +218,7 @@ nav a {
 .texto2{
     width: 70%;
     margin-top: 30px;
-    margin-left: 200px;
+    align-self: center;
     padding: 50px;
     background: white;
     border-radius: 8px;
@@ -231,7 +244,7 @@ section {
 
 .patrocinadores h1{
     font-size: 30px;
-    margin-bottom: 50px;
+    align-self: center;
 }
 
 
