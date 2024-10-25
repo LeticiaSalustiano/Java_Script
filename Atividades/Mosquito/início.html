@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You Win!</title>
+    <title>Cata Mosca</title>
     <link rel="stylesheet" href="style.css"></head>
     <link rel="shortcut icon" href="imagens/mosca.png" type="image/x-icon">
 </head>
@@ -11,8 +11,19 @@
     <div class="container">
         <div class="row">
             <div class="col">
+                <h1>Cata Mosca</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
                 <div class="flex">
-                    <img src="imagens/vitoria.png" alt="Vitoria!">
+                    <select class="combo" id="combo">
+                        <option class="selecione" value="0">-------------</option>
+                        <option class="facil" value="facil">Fácil</option>
+                        <option class="normal" value="normal">Normal</option>
+                        <option class="dificil" value="dificil">Difícil</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -20,8 +31,7 @@
         <div class="row">
             <div class="col">
                 <div class="flex">
-                    <button class="btn_reiniciar" type="submit" onclick="reiniciar()">Reiniciar</button>
-                    <button class="btn_inicio" type="submit" onclick="inicio()">Início</button>
+                    <button class="btn_iniciar" type="submit" onclick="iniciar()">Play</button>
                 </div>
             </div>
         </div>
@@ -29,3 +39,4 @@
     <script src="jogo.js"></script>  
 </body>
 </html>
+

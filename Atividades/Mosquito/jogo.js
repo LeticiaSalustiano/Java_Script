@@ -1,77 +1,127 @@
-let altura, largura;
-let vidas = 3;
-let tempoRestante = 50;
-let intervalo;
+let altura, largura = 0
+let vidas = 1
+let temporizador = 1500
+ajustaTamanhoTela()
 
+//Seleciona a velocidade de acordo com o nivel
+let nivel = window.location.search
+    nivel = nivel.replace('?', '')
+    
+    if (nivel == 'facil'){
+            temporizador = 3500
+        } else if (nivel == 'normal'){
+            temporizador = 2500
+        } else {
+            temporizador = 1500
+        }
+
+
+//Ajustando tamanho da tela
 function ajustaTamanhoTela() {
-    altura = window.innerHeight;
-    largura = window.innerWidth;
-    console.log("Largura:", largura, "Altura:", altura);
+    altura = window.innerHeight
+    largura = window.innerWidth
+    console.log("Largura:", largura, "Altura:", altura)
 }
 
-ajustaTamanhoTela();
-window.addEventListener('resize', ajustaTamanhoTela);
 
-function randomizaPosicao() {
-    let posicaoX = Math.floor(Math.random() * largura) - 50;
-    let posicaoY = Math.floor(Math.random() * altura) - 50;
+//Contagem do tempo e fluxo da vitória
+let cronometro = setInterval( function(){
+            tempo -= 1
+                if( tempo < 0){
+                    clearInterval(cronometro)
+                    clearInterval(criaMosquito)
+                    window.location.href = 'vitória.html'
+                } else{ 
+                    document.getElementById('cronometro').innerHTML = tempo
+                }
+            }, 1000)
 
-    posicaoX = posicaoX < 0 ? 0 : posicaoX;
-    posicaoY = posicaoY < 0 ? 0 : posicaoY;
 
-    // Criar o elemento HTML
-    let mosquito = document.createElement('img');
-    mosquito.src = 'imagens/mosca.png';
-    mosquito.className = tamanhoGrande();
-    mosquito.style.left = posicaoX + 'px';
-    mosquito.style.top = posicaoY + 'px';
-    mosquito.style.position = 'absolute';
-    mosquito.classList.add(ladoAleatorio());
+function randomizaPosicao(){
+    //remover mosquito anterior
+    if(document.getElementById('mosquito')) {
+        document.getElementById('mosquito').remove() 
 
+        //diminuindo a quantidade de vidas e criando o fim do jogo
+        if(vidas > 3){
+            window.location.href = 'derrota.html'}
+            else{
+            document.getElementById('v' + vidas).src = 'imagens/coracao_vazio.png'
+            vidas++
+            }
+        }
+
+    //randomizando posição na tela
+    let posicaoX = Math.floor(Math.random() * largura) -100
+    let posicaoY = Math.floor(Math.random() * altura) -100
+
+    posicaoX = posicaoX < 0 ? 0 : posicaoX
+    posicaoY = posicaoY < 0 ? 0 : posicaoY
+
+    console.log(posicaoX, posicaoY)
+
+    //criar o elemento HTML
+    let mosquito = document.createElement('img')
+    mosquito.src = 'imagens/mosca.png'
+    mosquito.className = (tamanhoAleatorio() + ' ' +  ladoAleatorio())
+	mosquito.style.left = posicaoX + 'px'
+	mosquito.style.top = posicaoY + 'px'
+	mosquito.style.position = 'absolute'
+    mosquito.id = 'mosquito'
     mosquito.onclick = function() {
-        this.remove(); // Remove o mosquito quando clicado
-    };
+        this.remove()}
 
-    document.getElementById('gameArea').appendChild(mosquito);
+    //colocar o elemento na tela
+    document.body.appendChild(mosquito)
 }
 
-function tamanhoGrande() {
-    let classe = Math.floor(Math.random() * 3);
-    switch (classe) {
+
+//Escolher o tamanho do mosquito
+function tamanhoAleatorio(){
+    let classe = Math.floor(Math.random() * 3)
+
+    switch(classe){
         case 0:
-            return "mosquito1";
+            return "mosquito1"
         case 1:
-            return "mosquito2";
-        case 2:
-            return "mosquito3";
+            return "mosquito2"
+        case 2: 
+            return "mosquito3"
     }
 }
 
-function ladoAleatorio() {
-    let lado = Math.floor(Math.random() * 2);
-    return lado === 0 ? "ladoA" : "ladoB";
+
+//Escolher a direção do mosquito
+function ladoAleatorio(){
+    let lado = Math.floor(Math.random() * 2)
+
+    switch(lado){
+        case 0:
+            return "ladoA"
+        case 1:
+            return "ladoB"
+    }
 }
 
-function apareceNaTela() {
-    randomizaPosicao();
+
+//reiniciando o jogo
+function reiniciar(){
+    window.location.href = 'Play.html'
 }
 
-function comecarPartida() {
-    if (intervalo) clearInterval(intervalo); // Limpa intervalos anteriores
-    intervalo = setInterval(apareceNaTela, 1000);
-    contagemTempo();
+//voltando pro inicio
+function inicio(){
+    window.location.href = 'início.html'
 }
 
-function contagemTempo() {
-    let timer = setInterval(() => {
-        if (tempoRestante > 0) {
-            tempoRestante--;
-            document.getElementById('tempoRestante').textContent = tempoRestante;
-        } else {
-            clearInterval(timer);
-            clearInterval(intervalo);
-            alert('Fim de jogo! Você eliminou ' + (3 - vidas) + ' mosquitos.');
-            // Resetar o jogo, se desejado
-        }
-    }, 1000);
+
+//iniciando o jogo
+function iniciar(){
+    let nivel = document.getElementById('combo').value
+    if(nivel == 0){
+        alert('Obrigatório a seleção de um nível!')
+    } else{
+       // window.alert(nivel)
+        window.location.href = 'Play.html' + '?' + nivel
+    }
 }

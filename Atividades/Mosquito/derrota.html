@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Cata Mosca</title>
+    <title>Game Over!</title>
+    <link rel="stylesheet" href="style.css"></head>
     <link rel="shortcut icon" href="imagens/mosca.png" type="image/x-icon">
-    <script src="jogo.js" defer></script>
 </head>
-<body onresize="ajustaTamanhoTela()">
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="flex">
+                    <img src="imagens/game_over.png" alt="Game Over!">
+                </div>
+            </div>
+        </div>
 
-    <main>
-        <h1>Você Falhou!</h1>
-        <button class="btn" onclick="contagemTempo()">Reiniciar</button>
-    </main>
+        <div class="row">
+            <div class="col">
+                <div class="flex">
+                    <button class="btn_reiniciar" type="submit" onclick="reiniciar()">Reiniciar</button>
+                    <button class="btn_inicio" type="submit" onclick="inicio()">Início</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script src="jogo.js">
+    </script>  
+</body>
+</html>

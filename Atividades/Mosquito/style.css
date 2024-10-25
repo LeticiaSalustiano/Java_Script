@@ -6,73 +6,128 @@ h1{
     font-style: normal;
     color: #ff0f0f; 
     font-size: 70px;  
+    text-align: center;
+    margin-top: 15%;
 }
 
-body {
+*{
+    margin: 0px;
+    padding: 0px;
+    cursor: url(../imagens/mata_mosca.png)25 25, pointer;
+}
+
+body{
     background-image: url(../imagens/bg.jpg);
     background-size: cover;
-    width: 100%;
-    height: cover;
     background-repeat: no-repeat;
 }
 
-main{
-    align-items: center;
-    text-align: center;
-    padding: 10%;
+.mosquito1{
+    width: 50px;
+    height: 50px;
 }
 
-.btn {
-    font-family: "Henny Penny", system-ui;
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+.mosquito2{
+    width: 75px;
+    height: 75px;
 }
 
-.btn:hover {
-    background-color: #45a049;
-}
-
-
-.painel {
+.mosquito3{
     width: 100px;
-    padding: 15px;
+    height: 100px;
+}
+
+.ladoA{
+    transform: scaleX(1);
+}
+
+.ladoB{
+    transform: scaleX(-1);
+}
+
+.painel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    left: 0px;
+    bottom: 0px;
     border-top: solid 1px white;
     background-color: white;
     opacity: 70%;
 }
 
-.vidas {
+.vidas{
+    float: left;
+}
+
+.cronometro{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn_reiniciar{
+    background-color: #ff0f0f;
+    border-color: rgb(0, 0, 0);
+    color: white;
+    margin-top: -50px;
+    height: 50px;
+    padding: 5%;
+    margin-right: 1%;
+}
+
+.btn_inicio{
+    background-color: #ff0f0f;
+    border-color: rgb(0, 0, 0);
+    color: white;
+    margin-top: -50px;
+    height: 50px;
+    width: 130px;
     
 }
 
-.cronometro {
-    font-size: 1.2em;
+
+.btn_reiniciar, .btn_iniciar, .btn_inicio, .combo{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 130px;
 }
 
-.mosquito1 {
-    width: 50px;
-    height: 50px;
+.btn_iniciar{
+    background-color: rgb(235, 38, 38);
+    border-color: rgb(0, 0, 0);
+    color: white;
+    margin-top: -10px;
 }
 
-.mosquito2 {
-    width: 70px;
-    height: 70px;
+.selecione{
+    background-color: white;
+    color:white;
+    font-size: 16px;
 }
 
-.mosquito3 {
-    width: 90px;
-    height: 90px;
+.facil{
+    background-color: #bdbdbd;
+    color: #292929;
+    font-family: 'Arial Narrow Bold', sans-serif;
 }
 
-.ladoA {
-    transform: scaleX(1); /* Normal */
+.normal{
+    background-color: #bdbdbd;
+    color: #292929;
+    font-family: 'Arial Narrow Bold', sans-serif;
 }
 
-.ladoB {
-    transform: scaleX(-1); /* Inverter horizontalmente */
+.dificil{
+    background-color: #bdbdbd;
+    color: #292929;
+    font-family: 'Arial Narrow Bold', sans-serif;
 }

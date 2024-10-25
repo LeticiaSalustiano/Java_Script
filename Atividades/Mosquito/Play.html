@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Cata Mosca</title>
+    <title>You got it!</title>
+    <link rel="stylesheet" href="style.css"></head>
     <link rel="shortcut icon" href="imagens/mosca.png" type="image/x-icon">
-    <script src="jogo.js" defer></script>
-</head>
 <body onresize="ajustaTamanhoTela()">
-
-    <link rel="stylesheet" href="">
 
     <div class="painel">
         <div class="vidas">
-            <img src="imagens/coracao_cheio.png" alt="Coração cheio">
-            <img src="imagens/coracao_cheio.png" alt="Coração cheio">
-            <img src="imagens/coracao_cheio.png" alt="Coração cheio">
+            <img id="v1" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+            <img id="v2" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+            <img id="v3" src="imagens/coracao_cheio.png" alt="coracao_cheio">
         </div>
-        <div class="cronometro">Tempo restante: <span id="tempoRestante">50 </span> Segundos</div>
+        <div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
     </div>
 
-    <div id="gameArea" style=" height: cover; width: cover;"></div>
 
+    <script>  
+        let tempo = 30
+        document.getElementById('cronometro').innerHTML = tempo
+        let criaMosquito 
+        window.onload = function(){
+            criaMosquito = setInterval(function(){randomizaPosicao()},temporizador)
+        }
+    </script>
+    <script src="jogo.js"></script>
 </body>
 </html>
