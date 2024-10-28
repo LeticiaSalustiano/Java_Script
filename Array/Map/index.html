@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Exemplo de Map</title>
+</head>
+<body>
+
+    <main><h1>Exemplo de uso da função </h1>
+
+    <h2>Raiz Quadrada dos Números</h2>
+    <div id="resultado-raizes"></div>
+
+    <h2>Nomes dos Produtos em Letras Maiúsculas</h2>
+    <div id="resultado-nomes"></div>
+    </main>
+
+    <script>
+        
+        const numeros = [4, 9, 16, 25];
+        const raizesQuadradas = numeros.map(num => Math.sqrt(num));
+
+        document.getElementById('resultado-raizes').innerText = `Raízes Quadradas: ${raizesQuadradas.join(', ')}`;
+
+       
+        const produtos = [
+            { nome: 'Camiseta', preco: 29.99 },
+            { nome: 'Calça', preco: 49.99 },
+            { nome: 'Tênis', preco: 89.99 }
+        ];
+        const nomesMaiusculos = produtos.map(produto => produto.nome.toUpperCase());
+
+        document.getElementById('resultado-nomes').innerText = `Nomes dos Produtos: ${nomesMaiusculos.join(', ')}`;
+    </script>
+
+
+</body>
+</html>
