@@ -99,4 +99,20 @@ function processarDados(dados, callback) {
   processarDados([1, 2, 3], function(resultado) {
     console.log(resultado); 
   });
+
+
+//Console.table;
+const pessoas = [
+     {nome: 'Letícia', idade: '17'},
+     {nome: 'Lucas', idade: '20'}
+];
+console.table(pessoas);
+
+
+//Console.group;
+console.group ('Grupo 1');
+console.log ('Mensagem 1');
+console.log ('Mensagem 2');
+console.log ('Mensagem 3');
+console.groupEnd();
  

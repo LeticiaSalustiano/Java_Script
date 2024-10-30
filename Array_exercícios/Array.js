@@ -66,7 +66,7 @@ console.log(todosPositivos);
 const alunos = [
     { nome: 'Ana', nota: 7 },
     { nome: 'João', nota: 5 },
-    { nome: 'Maria', nota: 8 }
+    { nome: 'Maria', nota: 10 }
   ];
   
   const todosAprovados = alunos.every(aluno => aluno.nota >= 6);
